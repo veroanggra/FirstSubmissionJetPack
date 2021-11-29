@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_16dp">
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_150dp"
+        android:contentDescription="@string/txt_poster_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTitleItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/dummy_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivItem"
+        app:layout_constraintTop_toTopOf="@+id/ivItem" />
+
+    <TextView
+        android:id="@+id/tvGenderItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/dummy_gender"
+        android:textSize="@dimen/_14sp"
+        android:maxLength="20"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/ivItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleItem" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:drawablePadding="@dimen/_4dp"
+        android:text="@string/dummy_rating"
+        app:drawableStartCompat="@drawable/ic_baseline_star_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGenderItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ivItem"
+        app:layout_constraintTop_toTopOf="@+id/tvGenderItem"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDescriptionItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="@string/dummy_description"
+        app:layout_constraintBottom_toBottomOf="@+id/ivItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toEndOf="@+id/ivItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenderItem"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageView
+        android:id="@+id/ivBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ivItem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_bookmark_24"
+        android:contentDescription="@string/desc_bookmark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

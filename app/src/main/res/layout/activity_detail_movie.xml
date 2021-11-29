@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.movie.detail.DetailMovieActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/clToolBarMovieDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/main_color"
+            app:expandedTitleTextAppearance="@style/ExpandedBarTextStyle"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Detail">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300dp">
+
+                <ImageView
+                    android:id="@+id/ivDetailMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/txt_poster_image"
+                    android:foreground="@drawable/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@color/main_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivPosterDetailMovie"
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="@dimen/_150dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/txt_poster_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivDetailMovie"
+                    app:layout_constraintVertical_bias="0.854"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tvTitleDetailMovie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:maxLines="4"
+                    android:text="@string/dummy_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivPosterDetailMovie"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ivPosterDetailMovie"
+                    app:layout_constraintTop_toTopOf="@+id/ivPosterDetailMovie"
+                    app:layout_constraintVertical_bias="0.339" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tbDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_40dp">
+
+            <TextView
+                android:id="@+id/tvGenreMovieLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/genre_lable"
+                android:textSize="@dimen/_14sp"
+                app:drawableStartCompat="@drawable/ic_baseline_local_movies_24"
+                app:layout_constraintEnd_toStartOf="@id/tvGenreMovieDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGenreMovieDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:text="@string/dummy_gender"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvGenreMovieLabel"
+                app:layout_constraintStart_toEndOf="@id/tvGenreMovieLabel"
+                app:layout_constraintTop_toTopOf="@id/tvGenreMovieLabel"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvStarLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/rating_lable"
+                app:drawableStartCompat="@drawable/ic_baseline_star_24"
+                app:layout_constraintEnd_toStartOf="@id/tvRatingDetailMovie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGenreMovieLabel" />
+
+            <TextView
+                android:id="@+id/tvRatingDetailMovie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:text="@string/dummy_rating"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvStarLable"
+                app:layout_constraintStart_toEndOf="@id/tvStarLable"
+                app:layout_constraintTop_toTopOf="@id/tvStarLable" />
+
+            <TextView
+                android:id="@+id/tvDateReleasedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="@string/released_date"
+                android:textSize="@dimen/_14sp"
+                app:drawableStartCompat="@drawable/ic_baseline_date_range_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStarLable" />
+
+            <TextView
+                android:id="@+id/tvDateReleasedMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:text="@string/dummy_date"
+                app:layout_constraintBottom_toBottomOf="@id/tvDateReleasedLabel"
+                app:layout_constraintStart_toEndOf="@id/tvDateReleasedLabel"
+                app:layout_constraintTop_toTopOf="@id/tvDateReleasedLabel" />
+
+            <TextView
+                android:id="@+id/tvDescriptionDetailMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:text="@string/dummy_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDateReleasedLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

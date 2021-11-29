@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WatchingApp</string>
+    <string name="txt_poster_image">Poster Image</string>
+    <string name="dummy_title">Doraemon</string>
+    <string name="dummy_gender">Family</string>
+    <string name="dummy_rating">4.5</string>
+    <string name="dummy_description">Doraemon is a robotic cat that comes from the 22nd century. He comes to 20th century and stays with Nobi Family. The Nobis love Doraemon very much. So Doraemon always help the Nobis with the devices from 22nd century.</string>
+    <string name="desc_bookmark">Image Bookmark</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movies">Movies</string>
+    <string name="txt_movie">Movie</string>
+    <string name="txt_tv">TVShow</string>
+    <string name="genre_lable">Genre</string>
+    <string name="rating_lable">Rating</string>
+    <string name="released_date">Released</string>
+    <string name="dummy_date">4 Nov 2021</string>
+</resources>
